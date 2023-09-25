@@ -1,0 +1,87 @@
+.text
+.global _start
+.extern printf
+
+.func riemannSum
+riemannSum:
+	LDR X1, =coe1
+	LDR X2, =coe2
+	LDR X3, =coe3
+	LDR X4, =coe4
+	LDR D1, [X1] // 8.32
+	LDR D2, [X2] // -6.53
+	LDR D3, [X3] // 9.34
+	LDR D4,	[X4] // 12.32
+	FMUL D5, D3, D0 // 9.34 * x
+	FADD D4, D4, D5 // (9.34 * x) + 12.32
+	FMUL D0, D0, D0 // x^2
+	FMUL D5, D2, D0
+	FADD D4, D4, D5 // (12.32 + 9.34 * x) + -6.53x^2*
+	FMUL D0, D0, D0 // x^4
+	FMUL D5, D1, D0
+	FADD D4, D4, D5 // (12.32 + 9.34 * x + -6.53x^2) + 8.32x^4
+	FMOV D0, D4
+	BR LR
+.endfunc
+
+PrintPlease:
+	FMOV D0, D8
+	LDR X1, =a
+	LDR X2, =b
+	LDR X3, =n	//grab all the starting data
+	LDR D1, [X1]
+	LDR D2, [X2]
+	LDR D3, [X3]
+	LDR X0, =print_result
+	
+	BL printf
+	b Exit
+	
+Exit:
+	mov X0, #0
+	mov W8, #93
+	SVC #0
+	
+_start:
+	LDR X0, =a	// left bound
+	LDR X1, =b	// right bound
+	LDR X2, =n	// num of rectangles
+	LDR D10, [X0]
+	LDR D11, [X1]
+	LDR D12, [X2]
+	FSUB D3, D11, D10
+	FADD D4, D12, D12
+	FDIV D4, D3, D4
+	FADD D9, D4, D10	// x
+	FDIV D7, D3, D12	//width of the rectangle
+	FMOV D0, D9
+	FSUB D8, D8, D8
+L1:
+	FCMP D0, D11	
+	B.GT PrintPlease
+	BL riemannSum
+	FMUL D3, D0, D7
+	FADD D8, D8, D3
+	FADD D9, D9, D7
+	FMOV D0, D9
+	B L1
+	
+.data
+	a: .double -1.0	// left bound
+	b: .double 1.0	// right bound
+	n: .double 5	// num of rectangles
+	coe1: .double 8.32	// Coefficient 1
+	coe2: .double -6.53	//Coefficient 2
+	coe3: .double 9.34	//Coefficient 3
+	coe4: .double 12.32	//Coefficient 4
+
+print_result:
+	.ascii "Integral appoximation: %lf\nLower bound: %lf\nUpper Bound: %lf\nNumber of Rectangles: %lf\n"
+	
+.bss
+result:
+	.skip 8
+
+.end
+
+	

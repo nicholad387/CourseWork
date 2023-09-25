@@ -1,0 +1,73 @@
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:1:abs-of-negative.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:1:abs-of-negative is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:1:abs-of-negative.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:4:abs-of-var.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:4:abs-of-var is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:4:abs-of-var.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:6:abs-of-let.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:6:abs-of-let is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:6:abs-of-let.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:8:cons-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:8:cons-1 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:8:cons-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:10:cons-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:10:cons-3 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:10:cons-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:12:hd-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:12:hd-1 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:12:hd-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:14:hd-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:14:hd-3 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:14:hd-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:16:tl-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:16:tl-1 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:16:tl-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:18:tl-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:18:tl-3 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:18:tl-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:20:empty-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:20:empty-1 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:20:empty-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:23:empty-4.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Test graded test suite:23:empty-4 is successful.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:23:empty-4.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:25:btree-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Test graded test suite:25:btree-1 has failed.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: btree-1 failed, -3 point(s)
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: expected: Ok (TreeVal) but got: Error (Failure("implement me")) in test graded test suite:25:btree-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: 
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:25:btree-1.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:27:btree-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Test graded test suite:27:btree-3 has failed.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: btree-3 failed, -5 point(s)
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: expected: Ok (TreeVal) but got: Error (Failure("implement me")) in test graded test suite:27:btree-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: 
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:27:btree-3.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:29:btree-5.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Test graded test suite:29:btree-5 has failed.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: btree-5 failed, -4 point(s)
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: expected: Ok (TreeVal) but got: Error (Failure("implement me")) in test graded test suite:29:btree-5.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: 
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:29:btree-5.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:32:caseT-2.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Test graded test suite:32:caseT-2 has failed.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: caseT-2 failed, -4 point(s)
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: expected: Ok (NumVal 12) but got: Error (Failure("implement me")) in test graded test suite:32:caseT-2.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: 
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:32:caseT-2.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: Start test graded test suite:34:caseT-4.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Test graded test suite:34:caseT-4 has failed.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: caseT-4 failed, -4 point(s)
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: expected: Ok (NumVal 1) but got: Error (Failure("implement me")) in test graded test suite:34:caseT-4.
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 E: 
+2023-03-02T21:00:08+00:00 Nicholass-MacBook-Pro-2.local#02 I: End test graded test suite:34:caseT-4.

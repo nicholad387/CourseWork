@@ -1,0 +1,104 @@
+.text
+.global _start
+
+_start:
+
+	MOV X19, 0
+	MOV X23, 0	// index 
+	MOV X24, 0
+	MOV X25, 10	// const
+	MOV X26, 48	// offset 
+
+	ADR X21, buffer
+	Loop:
+		MOV X0, 0
+		MOV X1, X21
+		MOV X2, 1
+		MOV X8, 63
+		SVC 0
+		
+		LDUR X9, [X21, 0]
+		ADD X21, X21, X19
+		CMP X9, 10
+		BEQ DONE1
+		
+		MUL X23, X23, X25
+		SUB X23, X23, X26
+		ADD X23, X23, X9
+		
+		ADD X19, X19, 1
+		B Loop
+		
+DONE1:
+	MUL X23, X23, X23
+	
+	MOV X24, X23
+	MOV X21, 0
+	
+LENGTH_NUM:
+	CMP X24, 0
+	BLE DONE2
+	SDIV X24, X24, X25
+	ADD X21, X21, 1
+	B LENGTH_NUM
+DONE2:
+	MOV X9, X21
+	MOV X20, 1
+	SUB X9, X9, 1
+	
+POWER_FUNC:
+	CMP X9, 0
+	BLE DONE3
+	MUL X20, X25, X20
+	SUB X9, X9, 1
+	B POWER_FUNC
+	
+DONE3:
+	MOV X18, 1
+	
+WRITELOOP:
+	CMP X21, 1
+	BLT DONE4
+	
+	SDIV X9, X23, X20
+	SDIV X20, X20, X25
+	
+MODULO_LOOP:
+	CMP X9, X25
+	BLT MODULO_DONE
+	SUB X9, X9, X25
+	B MODULO_LOOP
+	
+MODULO_DONE:
+	ADR X10, buffer
+	ADD X9, X9, X26
+	STUR X9, [X10, 0]
+	
+	MOV X0, 1
+	ADR X1, buffer
+	MOV X2, 1
+	MOV X8, 64
+	SVC 0
+	SUB X21, X21, 1
+	
+	B WRITELOOP
+	
+DONE4:
+	ADR X10, buffer
+	MOV X9, 10
+	STUR X9, [X10, 0]
+	
+	MOV X0, 1
+	ADR X1, buffer
+	MOV X2, 1
+	MOV X8, 64
+	SVC 0
+	
+	MOV X0, 0
+	MOV X8, 93
+	SVC 0
+	
+.bss
+	buffer: .space 64
+
+.end
